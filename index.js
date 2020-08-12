@@ -1,6 +1,9 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const axios = require("axios");
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 async function getCache() {
   try {
@@ -27,6 +30,7 @@ async function getCache() {
 
     if (query === cachedGrab) {
       // nothing
+      console.log('cached grab')
     } else {
       axios.post(
         `https://api.telegram.org/${process.env.TOKEN}/sendMessage?chat_id=${process.env.CHAT_ID}&text=${query}`

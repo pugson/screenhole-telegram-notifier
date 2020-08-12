@@ -70,7 +70,7 @@ typings/
 
 # dotenv environment variables file
 .env
-.last_grab_url.txt
+last_grab_url.txt
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
